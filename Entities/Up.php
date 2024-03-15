@@ -3,6 +3,7 @@
 namespace Modules\Iad\Entities;
 
 use Astrotomic\Translatable\Translatable;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Core\Icrud\Entities\CrudModel;
 use Modules\Isite\Traits\WithProduct;
 

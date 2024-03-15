@@ -3,17 +3,26 @@
 namespace Modules\Iad\Entities;
 
 use Astrotomic\Translatable\Translatable;
-use Modules\Core\Icrud\Entities\CrudModel;
-use Modules\Ilocations\Entities\City;
+use Illuminate\Database\Eloquent\Model;
+use Modules\Media\Support\Traits\MediaRelation;
+use Modules\Iad\Entities\Category;
+use Modules\Iad\Entities\Field;
+use Modules\Iad\Entities\Schedule;
 use Modules\Ilocations\Entities\Country;
+use Modules\Ilocations\Entities\Province;
+use Modules\Ilocations\Entities\City;
 use Modules\Ilocations\Entities\Locality;
 use Modules\Ilocations\Entities\Neighborhood;
-use Modules\Ilocations\Entities\Province;
-use Modules\Media\Support\Traits\MediaRelation;
+use Modules\Iad\Entities\AdStatus;
+use Modules\Core\Icrud\Entities\CrudModel;
+use Modules\Isite\Traits\RevisionableTrait;
+
+use Modules\Core\Support\Traits\AuditTrait;
+use Modules\Iqreable\Traits\IsQreable;
 
 class Ad extends CrudModel
 {
-    use Translatable, MediaRelation;
+    use Translatable, MediaRelation, IsQreable;
 
     public $transformer = 'Modules\Iad\Transformers\AdTransformer';
 

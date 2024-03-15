@@ -2,8 +2,9 @@
 
 namespace Modules\Iad\Providers;
 
-use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Console\Scheduling\Schedule;
+use Modules\Iad\Jobs\UploadAds;
 
 class ScheduleServiceProvider extends ServiceProvider
 {

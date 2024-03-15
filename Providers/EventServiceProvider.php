@@ -3,10 +3,10 @@
 namespace Modules\Iad\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
 use Modules\Iad\Events\Handlers\HandleAdStatuses;
-use Modules\Iad\Events\Handlers\HandleCheckAdRequest;
 use Modules\Iad\Events\Handlers\ProcessOrder;
+use Illuminate\Support\Facades\Event;
+use Modules\Iad\Events\Handlers\HandleCheckAdRequest;
 
 class EventServiceProvider extends ServiceProvider
 {

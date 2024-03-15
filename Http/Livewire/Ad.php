@@ -3,7 +3,9 @@
 namespace Modules\Iad\Http\Livewire;
 
 use Livewire\Component;
+use Illuminate\Http\Request;
 use Modules\Iad\Repositories\AdRepository;
+use Illuminate\Support\Facades\Auth;
 
 class Ad extends Component
 {

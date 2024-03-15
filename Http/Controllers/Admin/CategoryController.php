@@ -2,12 +2,13 @@
 
 namespace Modules\Iad\Http\Controllers\Admin;
 
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Modules\Core\Http\Controllers\Admin\AdminBaseController;
 use Modules\Iad\Entities\Category;
 use Modules\Iad\Http\Requests\CreateCategoryRequest;
 use Modules\Iad\Http\Requests\UpdateCategoryRequest;
 use Modules\Iad\Repositories\CategoryRepository;
+use Modules\Core\Http\Controllers\Admin\AdminBaseController;
 
 class CategoryController extends AdminBaseController
 {

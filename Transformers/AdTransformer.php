@@ -16,6 +16,8 @@ class AdTransformer extends CrudResource
             'checked' => $this->checked ? '1' : '0',
             'sortOrder' => $this->sort_order ?? 0,
             'defaultPrice' => $this->defaultPrice,
+            'url' => $this->url,
+            'fields' => $this->fields
         ];
     }
 }

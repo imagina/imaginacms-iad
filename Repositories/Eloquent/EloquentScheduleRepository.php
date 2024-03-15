@@ -4,6 +4,7 @@ namespace Modules\Iad\Repositories\Eloquent;
 
 use Modules\Core\Icrud\Repositories\Eloquent\EloquentCrudRepository;
 use Modules\Iad\Repositories\ScheduleRepository;
+use Modules\Core\Repositories\Eloquent\EloquentBaseRepository;
 
 class EloquentScheduleRepository extends EloquentCrudRepository implements ScheduleRepository
 {

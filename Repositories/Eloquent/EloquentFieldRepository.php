@@ -2,8 +2,8 @@
 
 namespace Modules\Iad\Repositories\Eloquent;
 
-use Modules\Core\Repositories\Eloquent\EloquentBaseRepository;
 use Modules\Iad\Repositories\FieldRepository;
+use Modules\Core\Repositories\Eloquent\EloquentBaseRepository;
 
 class EloquentFieldRepository extends EloquentBaseRepository implements FieldRepository
 {

@@ -2,13 +2,14 @@
 
 namespace Modules\Iad\Providers;
 
-use Illuminate\Support\Facades\Blade;
+use Illuminate\Database\Eloquent\Factory as EloquentFactory;
 use Illuminate\Support\ServiceProvider;
-use Livewire\Livewire;
+use Modules\Core\Traits\CanPublishConfiguration;
 use Modules\Core\Events\BuildingSidebar;
 use Modules\Core\Events\LoadingBackendTranslations;
-use Modules\Core\Traits\CanPublishConfiguration;
 use Modules\Iad\Listeners\RegisterIadSidebar;
+use Illuminate\Support\Facades\Blade;
+use Livewire\Livewire;
 
 class IadServiceProvider extends ServiceProvider
 {

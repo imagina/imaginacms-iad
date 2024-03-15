@@ -3,15 +3,27 @@
 namespace Modules\Iad\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Modules\Iad\Entities\Category;
-use Modules\Iad\Repositories\AdRepository;
+use Log;
+use Modules\Iad\Entities\AdUp;
 use Modules\Iad\Repositories\CategoryRepository;
-//Entities
-use Modules\Iad\Transformers\CategoryTransformer;
-//Entities
-use Modules\Ihelpers\Http\Controllers\Api\BaseApiController;
-//Transformers
+use Modules\Iad\Repositories\UpRepository;
+use Modules\Iad\Transformers\AdUpTransformer;
 use mysql_xdevapi\Collection;
+use Route;
+use Modules\Ihelpers\Http\Controllers\Api\BaseApiController;
+use Modules\Core\Http\Controllers\BasePublicController;
+use Mockery\CountValidator\Exception;
+
+//Entities
+use Modules\Iad\Entities\Ad;
+use Modules\Iad\Entities\Category;
+
+//Entities
+use Modules\Iad\Repositories\AdRepository;
+
+//Transformers
+use Modules\Iad\Transformers\AdTransformer;
+use Modules\Iad\Transformers\CategoryTransformer;
 
 class PublicController extends BaseApiController
 {

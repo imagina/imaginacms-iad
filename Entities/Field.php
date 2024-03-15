@@ -2,6 +2,7 @@
 
 namespace Modules\Iad\Entities;
 
+use Illuminate\Database\Eloquent\Model;
 use Modules\Core\Icrud\Entities\CrudModel;
 
 class Field extends CrudModel

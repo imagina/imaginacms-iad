@@ -3,11 +3,11 @@
 namespace Modules\Iad\Jobs;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Modules\Iad\Entities\Ad;
 use Modules\Iad\Entities\AdUp;
+use Illuminate\Foundation\Bus\Dispatchable;
 use Modules\Iad\Entities\Up;
 
 class NotifyUploadAds implements ShouldQueue

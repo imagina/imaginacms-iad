@@ -2,6 +2,8 @@
 
 namespace Modules\Iad\Transformers;
 
+use Illuminate\Http\Resources\Json\JsonResource;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 use Modules\Core\Icrud\Transformers\CrudResource;
 
 class ScheduleTransformer extends CrudResource

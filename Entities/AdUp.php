@@ -2,6 +2,8 @@
 
 namespace Modules\Iad\Entities;
 
+use Astrotomic\Translatable\Translatable;
+use Illuminate\Database\Eloquent\Model;
 use Modules\Core\Icrud\Entities\CrudModel;
 
 class AdUp extends CrudModel

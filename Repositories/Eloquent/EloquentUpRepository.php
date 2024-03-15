@@ -4,6 +4,10 @@ namespace Modules\Iad\Repositories\Eloquent;
 
 use Modules\Core\Icrud\Repositories\Eloquent\EloquentCrudRepository;
 use Modules\Iad\Repositories\UpRepository;
+use Modules\Core\Repositories\Eloquent\EloquentBaseRepository;
+use Modules\Icommerce\Events\CreateProductable;
+use Modules\Icommerce\Events\UpdateProductable;
+use Modules\Icommerce\Events\DeleteProductable;
 
 class EloquentUpRepository extends EloquentCrudRepository implements UpRepository
 {

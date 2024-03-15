@@ -2,12 +2,13 @@
 
 namespace Modules\Iad\Http\Controllers\Admin;
 
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Modules\Core\Http\Controllers\Admin\AdminBaseController;
 use Modules\Iad\Entities\Up;
 use Modules\Iad\Http\Requests\CreateUpRequest;
 use Modules\Iad\Http\Requests\UpdateUpRequest;
 use Modules\Iad\Repositories\UpRepository;
+use Modules\Core\Http\Controllers\Admin\AdminBaseController;
 
 class UpsController extends AdminBaseController
 {

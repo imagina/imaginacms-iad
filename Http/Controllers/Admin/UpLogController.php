@@ -2,12 +2,13 @@
 
 namespace Modules\Iad\Http\Controllers\Admin;
 
+use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Modules\Core\Http\Controllers\Admin\AdminBaseController;
 use Modules\Iad\Entities\UpLog;
 use Modules\Iad\Http\Requests\CreateUpLogRequest;
 use Modules\Iad\Http\Requests\UpdateUpLogRequest;
 use Modules\Iad\Repositories\UpLogRepository;
+use Modules\Core\Http\Controllers\Admin\AdminBaseController;
 
 class UpLogController extends AdminBaseController
 {

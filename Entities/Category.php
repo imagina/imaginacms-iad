@@ -3,14 +3,19 @@
 namespace Modules\Iad\Entities;
 
 use Astrotomic\Translatable\Translatable;
-use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Model;
 use Kalnoy\Nestedset\NodeTrait;
 use Modules\Core\Icrud\Entities\CrudModel;
 use Modules\Media\Support\Traits\MediaRelation;
+use Illuminate\Support\Str;
+use Modules\Isite\Traits\RevisionableTrait;
+
+use Modules\Core\Support\Traits\AuditTrait;
+use Modules\Iqreable\Traits\IsQreable;
 
 class Category extends CrudModel
 {
-    use Translatable, NodeTrait, MediaRelation;
+    use Translatable, NodeTrait, MediaRelation, IsQreable;
 
     public $transformer = 'Modules\Iad\Transformers\CategoryTransformer';
 

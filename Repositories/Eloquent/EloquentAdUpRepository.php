@@ -4,6 +4,7 @@ namespace Modules\Iad\Repositories\Eloquent;
 
 use Modules\Core\Icrud\Repositories\Eloquent\EloquentCrudRepository;
 use Modules\Iad\Repositories\AdUpRepository;
+use Modules\Core\Repositories\Eloquent\EloquentBaseRepository;
 
 class EloquentAdUpRepository extends EloquentCrudRepository implements AdUpRepository
 {
