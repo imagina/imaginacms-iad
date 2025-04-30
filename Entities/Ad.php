@@ -5,6 +5,7 @@ namespace Modules\Iad\Entities;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Ibuilder\Traits\isBuildable;
+use Modules\Ilocations\Traits\IsLocatable;
 use Modules\Media\Support\Traits\MediaRelation;
 use Modules\Iad\Entities\Category;
 use Modules\Iad\Entities\Field;
@@ -25,7 +26,8 @@ use Modules\Iqreable\Traits\IsQreable;
 
 class Ad extends CrudModel
 {
-  use Translatable, MediaRelation, IsQreable, isBuildable, IsNotificable;
+  use Translatable, MediaRelation, IsQreable, isBuildable, IsLocatable, IsNotificable;
+
 
   public $transformer = 'Modules\Iad\Transformers\AdTransformer';
 

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Kalnoy\Nestedset\NodeTrait;
 use Modules\Core\Icrud\Entities\CrudModel;
 use Modules\Ibuilder\Traits\isBuildable;
+use Modules\Ilocations\Traits\IsLocatable;
 use Modules\Media\Support\Traits\MediaRelation;
 use Illuminate\Support\Str;
 use Modules\Isite\Traits\RevisionableTrait;
@@ -16,7 +17,7 @@ use Modules\Iqreable\Traits\IsQreable;
 
 class Category extends CrudModel
 {
-    use Translatable, NodeTrait, MediaRelation, IsQreable, isBuildable;
+    use Translatable, NodeTrait, MediaRelation, IsQreable, isBuildable, IsLocatable;
 
     public $transformer = 'Modules\Iad\Transformers\CategoryTransformer';
 

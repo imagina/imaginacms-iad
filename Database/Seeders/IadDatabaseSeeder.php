@@ -16,7 +16,7 @@ class IadDatabaseSeeder extends Seeder
         Model::unguard();
         ProcessSeeds::dispatch([
             'baseClass' => "\Modules\Iad\Database\Seeders",
-            'seeds' => ['IadModuleTableSeeder', 'IformComplaintTableSeeder'],
+            'seeds' => ['IadModuleTableSeeder', 'IformComplaintTableSeeder', 'RefactorLocationColumns'],
         ]);
     }
 }

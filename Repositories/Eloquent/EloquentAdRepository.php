@@ -282,6 +282,25 @@ class EloquentAdRepository extends EloquentCrudRepository implements AdRepositor
       });
     }
 
+    //Filter locatable
+    if (isset($filter->locatable)) {
+      $cityId = request()->session()->get('cityIdSelected') ?? null;
+      $countryId = request()->session()->get('countryIdSelected') ?? null;
+      $provinceId = request()->session()->get('provinceIdSelected') ?? null;
+
+      if (!is_null($cityId) || !is_null($countryId) || !is_null($provinceId)) {
+        $query->where(function ($query) use ($cityId, $countryId, $provinceId) {
+          $query->whereHas('locatable', function ($q) use ($cityId, $countryId, $provinceId) {
+            $q->where(function ($subQuery) use ($cityId, $countryId, $provinceId) {
+              $subQuery->orWhere('city_id', $cityId)
+                ->orWhere('province_id', $provinceId)
+                ->orWhere('country_id', $countryId);
+            });
+          })->orDoesntHave('locatable');
+        });
+      }
+    }
+
     $this->validateIndexAllPermission($query, $params);
 
     if (isset($params->setting) && isset($params->setting->fromAdmin) && $params->setting->fromAdmin) {
