@@ -16,11 +16,11 @@
         {{$item->title}}
       </div>
       <div class="row no-gutters">
-        @if(isset($item->city->name))
+        @if(isset($item->locatable->city->name))
         <div class="col-12">
           <div class="card-pin-location">
               <i class="fa fa-map-marker"></i>
-              {{$item->city->name}}, {{$item->province->name ?? ""}}
+              {{$item->locatable->city->name}}, {{$item->locatable->province->name ?? ""}}
           </div>
         </div>
         @endif

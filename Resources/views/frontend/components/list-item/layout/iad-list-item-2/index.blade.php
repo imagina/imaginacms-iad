@@ -31,9 +31,10 @@
       </a>
       @endisset
       </br>
-
-      @if(isset($item->city->name))
-        <h3 class="text-center"><i class="fa fa-map-marker"></i>{{$item->city->name}}, {{$item->province->name ?? ""}}</h3>
+      @if(isset($item->locatable->city->name))
+        <h3 class="text-center"><i class="fa fa-map-marker"></i>{{$item->locatable->city->name}}
+          , {{$item->locatable->province->name ?? ""}}
+        </h3>
       @endif
   </div>
   <div class="card-footer">

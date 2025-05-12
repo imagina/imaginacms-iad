@@ -33,11 +33,11 @@
         </a>
       @endif
       <div id="extraInfo" class="d-inline-block">
-        @if(isset($item->city->name))
+        @if(isset($item->locatable->city->name))
           <span class="badge info-badge">
           {{--Ciudad--}}
             <i class="fa fa-map-marker"></i>
-            {{$item->city->name}}
+            {{$item->locatable->city->name}}
         </span>
         @endif
         @if(isset($item->locality->name))
@@ -64,8 +64,9 @@
         @if(!empty($item->defaultPrice))
           <span class="badge info-badge">${{formatMoney($item->defaultPrice)}}</span>
         @endif
-
-        <span class="badge info-badge">{{$item->country->name}}</span>
+        @if(isset($item->locatable->country->name))
+          <span class="badge info-badge">{{$item->locatable->country->name}}</span>
+        @endif
         @if($item->status == 3)
           <span class="badge info-badge certified" title="{{trans("iad::status.checked")}}"></span>
         @endif
